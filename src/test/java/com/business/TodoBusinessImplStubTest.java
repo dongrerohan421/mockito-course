@@ -1,6 +1,7 @@
 package com.business;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ class TodoBusinessImplStubTest {
 		List<String> filteredTodos = todoBusinessImpl.retrieveTodosRelatedToSpring("Dummy");
 
 		assertEquals(2, filteredTodos.size());
+		assertEquals("Learn Spring MVC", filteredTodos.get(0));
+		assertEquals("Learn Spring", filteredTodos.get(1));
 	}
 
 }
